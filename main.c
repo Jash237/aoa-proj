@@ -15,7 +15,7 @@ void toLowerCase(char *dest, char *src) {
     dest[i] = '\0';
 }
 
-void naiveStringMatch(char *text, char *pattern, int caseSensitive) {
+void stringMatch(char *text, char *pattern, int caseSensitive) {
     int n = strlen(text);
     int m = strlen(pattern);
     int matchIndices[MAX_TEXT];//stores starting position of each index at which pattern is found.
@@ -143,7 +143,7 @@ int main() {
                 printf("Enter choice (1 or 2): ");
                 scanf("%d", &caseChoice);
 
-                naiveStringMatch(text, pattern, (caseChoice == 1) ? 1 : 0);
+                stringMatch(text, pattern, (caseChoice == 1) ? 1 : 0);
                 break;
 
             case 4:
